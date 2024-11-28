@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="images/5801789.png" type="image/x-icon" />
+    <!-- google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- my style link -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="d-grid m-5">
+      <h1 class="m-auto position-relative">Bookmarker</h1>
+    </div>
+    <div class="container">
+      <div class="form m-5">
+        <h2 class="m-3 text-center">
+          <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h2>
+        <label class="fw-bold mb-2" for="site-name"
+          ><i class="fa-solid fa-book-bookmark"></i> Site Name
+        </label>
+        <input
+          placeholder="Bookmark Name"
+          oninput="validName()"
+          id="siteName"
+          type="text"
+          class="form-control mb-4"
+        />
+        <label class="fw-bold mb-2" for="site-name"
+          ><i class="fa-solid fa-link"></i> Site URL
+        </label>
+        <input
+          placeholder="Website URL"
+          oninput="validateURL()"
+          id="siteURL"
+          type="text"
+          class="form-control mb-2"
+        />
+        <div class="text-center">
+          <button onclick="addBook()" class="btn btn-danger px-5 py-2 mt-3 mb-4">submit</button>
+        </div>
+      </div>
+      <div
+        class="table-header d-flex fw-bold pt-3 justify-content-around align-items-center"
+      >
+        <p class="sec text-center">index</p>
+        <p class="sec text-center">Website Name</p>
+        <p class="sec text-center">Visit</p>
+        <p class="sec text-center">Delete</p>
+      </div>
+      <div id="myData" class="table-body ">
+       
+      </div>
+    </div>
+    <!--bootstrap link -->
+    <script src="js/bootstrap.bundle.js"></script>
+    <!-- my js link -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
